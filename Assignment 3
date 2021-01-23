@@ -1,0 +1,61 @@
+Python Essentials | Jan 2021 Batch 2
+
+Assignment 3 | 21st January 2021
+
+
+Question 1
+
+Write a Python program to merge two files into a third file.
+
+Code:
+# Python program to 
+# demonstrate merging 
+# of two files 
+  
+data = data2 = "" 
+  
+# Reading data from file1 
+with open('file1.txt') as fp: 
+    data = fp.read() 
+  
+# Reading data from file2 
+with open('file2.txt') as fp: 
+    data2 = fp.read() 
+  
+# Merging 2 files 
+# To add the data of file2 
+# from next line 
+data += "\n"
+data += data2 
+  
+with open ('file3.txt', 'w') as fp: 
+    fp.write(data) 
+    
+Question 2
+
+Take two lists as input list1 = [1,2,3,4,5] and list2 = ["a", "b", "c", "d", "e"] From that make a
+dictionary ouput {1:"a", 2:"b", 3:"c", 4:"d", 5:"e"}
+
+# Python3 code to demonstrate  
+# conversion of lists to dictionary 
+# using naive method 
+  
+# initializing lists 
+test_keys = [1,2,3,4,5] 
+test_values = ["a", "b", "c", "d", "e"] 
+  
+# Printing original keys-value lists 
+print ("Original key list is : " + str(test_keys)) 
+print ("Original value list is : " + str(test_values)) 
+  
+# using naive method 
+# to convert lists to dictionary 
+res = {} 
+for key in test_keys: 
+    for value in test_values: 
+        res[key] = value 
+        test_values.remove(value) 
+        break  
+  
+# Printing resultant dictionary  
+print ("Resultant dictionary is : " +  str(res)) 
